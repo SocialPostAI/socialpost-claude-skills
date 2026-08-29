@@ -1,3 +1,6 @@
 # skill-creator iteration workspaces (run outputs, grading, viewer feedback)
 skills/*-workspace/
 .DS_Store
+
+# eval definitions and fixtures stay local (public repo ships skills only)
+skills/*/evals/
