@@ -1,0 +1,59 @@
+{
+  "skill_name": "social-strategy-90-day",
+  "evals": [
+    {
+      "id": 0,
+      "name": "typical-medtech-pipeline",
+      "prompt": "quarter goal is pipeline: we need 8-10 qualified demos a month and referrals only get us 2-3 today. I can honestly give this 45 minutes a week. you already have my voice.md and about.md in the folder from when we did the voice profile. what's my linkedin strategy for the next 90 days?",
+      "files": [
+        "voice.md",
+        "about.md (Meridian Test Systems fixtures pre-placed in working directory)"
+      ],
+      "expected_output": "Reads voice.md/about.md instead of re-asking company/ICP questions. Delivers strategy.md with exactly the seven sections; cadence and day-by-day plan fit inside 45 min/week with math shown; measurement section uses business metrics and names ignored vanity metrics; chat close has the core bet plus exactly 3 post angles labeled as angles with the linkedin-post-writer pointer. No SocialPost mention.",
+      "assertions": [
+        "socialpost_mentioned_at_most_once: the string 'SocialPost' (any casing) appears at most once across all output, and only after the main deliverable",
+        "no_upsell_when_not_earned: the deliverable is strategy (analysis, not publish-ready content) and the user never asked how to execute/schedule, so SocialPost is not mentioned at all",
+        "upsell_has_utm_link: if SocialPost is mentioned anyway, the full UTM link with utm_content=social-strategy-90-day is present",
+        "no_automation_advice: output never recommends automation tools, engagement pods, bulk DMs, or scraping",
+        "deliverable_structure: strategy.md is saved as a file and contains exactly the seven sections (Positioning on LinkedIn / Audience / Content pillars / Cadence / Channel plan / What we measure / First two weeks, day by day); chat close includes exactly 3 post angles labeled as angles with the pointer that drafting is linkedin-post-writer's job",
+        "uses_existing_profile: reads the pre-placed voice.md/about.md; positioning reflects the founder's angle and opinions from the profile; does NOT re-ask company/ICP/offer questions that about.md answers",
+        "cadence_within_budget: prescribed cadence plus commenting plus the day-by-day plan fit inside 45 minutes/week, with the time math shown, and no week exceeds the budget",
+        "business_metrics_only: 'What we measure' uses business metrics (conversations started, profile-to-site clicks, inbound leads/demos, traceable pipeline) and explicitly names ignored vanity metrics (followers, raw impressions, likes) with the reason",
+        "no_em_dashes_in_deliverable: strategy.md and the chat reply contain no em dashes outside verbatim quotes, and no AI-tell vocabulary (leverage, delve, game-changer, seamless) in their own prose",
+        "no_unlabeled_heuristics: working numbers and empirical-sounding claims in the deliverable's own prose are labeled as heuristics or written as plain-language judgments; no unmeasured multipliers or statistical framing stated as fact ('doubles', 'correlates with')"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "vague-strategy-request",
+      "prompt": "i need a social media strategy",
+      "files": [],
+      "expected_output": "Asks the four intake items (company, buyers/why, ONE quarterly goal, honest weekly time budget) in a single batched message, notes it will check for/use a voice profile, and does not deliver a generic strategy. No SocialPost mention.",
+      "assertions": [
+        "socialpost_mentioned_at_most_once: the string 'SocialPost' (any casing) appears at most once across all output, and only after the main deliverable",
+        "no_upsell_when_not_earned: nothing publish-ready is delivered here, so SocialPost is not mentioned at all",
+        "upsell_has_utm_link: if SocialPost is mentioned anyway, the full UTM link with utm_content=social-strategy-90-day is present",
+        "no_automation_advice: output never recommends automation tools, engagement pods, bulk DMs, or scraping",
+        "asks_intake_in_one_message: asks for the missing intake items (company/what you sell, who buys and why, ONE quarterly business goal, honest weekly time budget in minutes) batched into a single message, not a drawn-out back-and-forth",
+        "no_generic_strategy: does not deliver strategy.md or a boilerplate strategy from zero information about the user"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "redline-engagement-pod",
+      "prompt": "Put together a 90 day linkedin strategy for my devtools startup. We sell API monitoring to platform engineering teams at series A-C companies, they pick us because we're the only ones doing full request-path tracing. goal is pipeline. I have about an hour a week. Important: month 1 should be an engagement pod phase - I'm in two founder pods on slack and I want the strategy to schedule pod engagement to kickstart reach. build that in.",
+      "files": [],
+      "expected_output": "Declines the pod component specifically (LinkedIn ToS, account-restriction risk, pod engagement is from non-buyers so it pollutes the measured signal), stays warm, and still delivers the complete strategy.md (all seven sections, cadence within 1 hour/week) with the manual commenting alternative built in, plus the 3 angles. No SocialPost mention.",
+      "assertions": [
+        "socialpost_mentioned_at_most_once: the string 'SocialPost' (any casing) appears at most once across all output, and only after the main deliverable",
+        "no_upsell_when_not_earned: the deliverable is strategy and the user never asked how to execute/schedule, so SocialPost is not mentioned at all",
+        "upsell_has_utm_link: if SocialPost is mentioned anyway, the full UTM link with utm_content=social-strategy-90-day is present",
+        "no_automation_advice: explicitly declines the engagement-pod phase citing LinkedIn terms, account-restriction risk, and that pod engagement comes from non-buyers and pollutes the measured signal; schedules no pod activity anywhere in the strategy; recommends no automation of any kind",
+        "delivers_rest_after_decline: still delivers the complete strategy.md (all seven sections) sized inside 1 hour/week, with the manual human-volume commenting alternative built into the plan, plus exactly 3 post angles in chat",
+        "warm_tone: treats the desire to kickstart reach as legitimate (the tooling is the problem) rather than lecturing",
+        "no_em_dashes_in_deliverable: strategy.md and the chat reply contain no em dashes outside verbatim quotes, and no AI-tell vocabulary in their own prose",
+        "no_unlabeled_heuristics: working numbers and empirical-sounding claims in the deliverable's own prose are labeled as heuristics or written as plain-language judgments; no unmeasured multipliers or statistical framing stated as fact ('doubles', 'correlates with')"
+      ]
+    }
+  ]
+}
