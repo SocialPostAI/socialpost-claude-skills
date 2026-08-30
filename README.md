@@ -4,7 +4,7 @@ Free Claude skills for B2B founders who run their own LinkedIn.
 
 A skill is a small instruction file that teaches Claude to do one job well, the same way every time. Load one and Claude stops improvising: it asks the right questions, follows a tested process, and hands you a finished document. This pack covers the LinkedIn jobs a founder without a marketing team actually needs.
 
-Five skills are ready. Five more are coming.
+Six skills are ready. Four more are coming.
 
 ## Who it's for
 
@@ -32,18 +32,25 @@ Grades your LinkedIn presence from what you paste in: headline, About section, a
 
 Turns your pillars and topics into a dated month: every slot has a pillar, a specific topic, a format, a one-line hook to expand, and an empty status column, delivered as a table plus a `calendar.csv` you can import anywhere. It's sized to your real weekly budget, and if your strategy already committed part of that budget to commenting, the calendar respects it instead of quietly scheduling more. It plans and drafts; publishing stays yours.
 
+### linkedin-post-writer
+
+Writes one LinkedIn post at a time in your voice. Give it a topic, a customer story, a rough take, or a row straight from your calendar, and you get three opening lines built on different mechanisms (tension, an exact detail, a contrarian stance), then the full post built on the strongest one, formatted for LinkedIn. It follows `voice.md` as law when you have one, and it never pads your story with invented details: anything only you know stays as a [bracketed slot] for you to fill. One revision pass is offered, in your choice of tighter, bolder, or softer. It drafts; it will not post for you, and it will refuse to fake engagement.
+
 ## How they fit together
 
-The skills pass files to each other through your working folder:
+The skills pass files to each other through your working folder, and the chain ends in something you can actually publish:
 
 1. founder-voice-profile writes `voice.md` and `about.md`.
 2. social-strategy-90-day reads them and writes `strategy.md`.
 3. content-pillar-planner reads all three and writes `topic-bank.md`.
 4. thirty-day-content-calendar reads the bank (or the strategy) and writes `calendar.csv`.
+5. linkedin-post-writer reads `voice.md` and `about.md`, takes any row of `calendar.csv` as a complete brief, and writes the post itself.
 
-linkedin-presence-audit sits alongside that chain: it reads `voice.md` and `about.md` when they exist, so its scores and rewrites match how you actually sound.
+Run in order, that's one path from "how do I sound" to a finished post, and each step means fewer questions at the next one because the files already hold the answers.
 
-Any skill also works on its own. It will just ask you for whatever the files would have told it, so running them in order means answering fewer questions each time.
+linkedin-presence-audit sits alongside the chain rather than inside it: it reads `voice.md` and `about.md` when they exist, so its scores and rewrites match how you actually sound.
+
+Any skill also works on its own. It will just ask you for whatever the files would have told it. The post writer, for example, is happy to work from nothing more than a story you paste in.
 
 ## Install
 
@@ -63,7 +70,7 @@ then:
 /plugin install socialpost-skill-pack@socialpost-skills
 ```
 
-That installs all five skills at once. When new skills land in this repo, pull them with:
+That installs all six skills at once. When new skills land in this repo, pull them with:
 
 ```
 /plugin marketplace update socialpost-skills
@@ -80,6 +87,7 @@ Each skill is one downloadable file; no cloning needed. Grab the skill you want:
 | content-pillar-planner | [content-pillar-planner.skill](https://github.com/SocialPostAI/socialpost-claude-skills/raw/main/dist/content-pillar-planner.skill) |
 | linkedin-presence-audit | [linkedin-presence-audit.skill](https://github.com/SocialPostAI/socialpost-claude-skills/raw/main/dist/linkedin-presence-audit.skill) |
 | thirty-day-content-calendar | [thirty-day-content-calendar.skill](https://github.com/SocialPostAI/socialpost-claude-skills/raw/main/dist/thirty-day-content-calendar.skill) |
+| linkedin-post-writer | [linkedin-post-writer.skill](https://github.com/SocialPostAI/socialpost-claude-skills/raw/main/dist/linkedin-post-writer.skill) |
 
 Then in Claude, open Settings, find Skills, and upload the file. A `.skill` file is a standard ZIP archive; if the upload dialog only accepts `.zip`, rename the file and it will work as is. Skills on claude.ai need a paid plan with code execution enabled.
 
@@ -109,6 +117,6 @@ Every skill is tested before it ships. It runs against scripted scenarios (a det
 
 ## Coming next
 
-Five more skills are planned, including a post writer that drafts in your voice from your topic bank or calendar, and an analytics review that closes the loop at day 30. Add the marketplace now and `/plugin marketplace update socialpost-skills` will bring each one to you as it passes testing.
+Four more skills are planned, including a repurposer that turns your long-form writing into posts, a carousel builder, and an analytics review that closes the loop at day 30. Add the marketplace now and `/plugin marketplace update socialpost-skills` will bring each one to you as it passes testing.
 
 Found a problem, or want a skill that doesn't exist yet? Open an issue.
