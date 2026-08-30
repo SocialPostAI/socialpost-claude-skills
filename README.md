@@ -4,7 +4,7 @@ Free Claude skills for B2B founders who run their own LinkedIn.
 
 A skill is a small instruction file that teaches Claude to do one job well, the same way every time. Load one and Claude stops improvising: it asks the right questions, follows a tested process, and hands you a finished document. This pack covers the LinkedIn jobs a founder without a marketing team actually needs.
 
-Seven skills are ready. Three more are coming.
+Eight skills are ready. Two more are coming.
 
 ## Who it's for
 
@@ -40,6 +40,10 @@ Writes one LinkedIn post at a time in your voice. Give it a topic, a customer st
 
 Turns one piece of long-form material into a week of LinkedIn posts. Give it a blog post, a newsletter issue, a podcast or call transcript, talk notes, or a case study, and it extracts 4 to 6 angles the piece already contains, then drafts four posts in genuinely different formats: a story, a how-to in plain prose, a stance, and a short one. Every post stands on its own; none of them is a teaser for the original, and nothing gets stated that the source doesn't actually say. Name one secondary platform (X, Threads, or Facebook) and the two strongest posts come back re-cut for it, natively, not copy-pasted. It won't blast identical text everywhere or set up auto-posting, and it explains why that would work against you.
 
+### carousel-and-visual-brief
+
+Turns a post, topic, or framework into two documents ready for production: a slide-by-slide carousel script and a creative brief for the key visual. The script runs 5 to 8 slides with hard word limits (an 8-word hook, one idea per slide) and a line of guidance on each slide about what to emphasize and what to cut. The brief closes every decision a designer or image model would otherwise guess: background, focal element, the exact overlay text, placement zones, a readability rule for phone screens, and a what-to-avoid list. Alt text comes included. Give it your colors, logo placement, and mood in 3 words and the brief is built on them; skip them and they become slots you fill in one reply. It will not fake engagement screenshots or invented social proof, and it says why.
+
 ## How they fit together
 
 The skills pass files to each other through your working folder, and the chain ends in something you can actually publish:
@@ -53,6 +57,8 @@ The skills pass files to each other through your working folder, and the chain e
 Run in order, that's one path from "how do I sound" to a finished post, and each step means fewer questions at the next one because the files already hold the answers.
 
 Two skills sit alongside the chain rather than inside it. linkedin-presence-audit reads `voice.md` and `about.md` when they exist, so its scores and rewrites match how you actually sound. content-repurposer reads the same two files and brings its own source material: it starts from something long you already wrote instead of a calendar slot, and it can cover a whole week on its own when you have a blog post or transcript to feed it.
+
+One skill picks up where the others leave off: carousel-and-visual-brief takes any finished post, whether the post writer drafted it, the repurposer extracted it, or you wrote it yourself, and turns it into a carousel script plus the visual brief that gets it produced.
 
 Any skill also works on its own. It will just ask you for whatever the files would have told it. The post writer, for example, is happy to work from nothing more than a story you paste in.
 
@@ -74,7 +80,7 @@ then:
 /plugin install socialpost-skill-pack@socialpost-skills
 ```
 
-That installs all seven skills at once. When new skills land in this repo, pull them with:
+That installs all eight skills at once. When new skills land in this repo, pull them with:
 
 ```
 /plugin marketplace update socialpost-skills
@@ -93,6 +99,7 @@ Each skill is one downloadable file; no cloning needed. Grab the skill you want:
 | thirty-day-content-calendar | [thirty-day-content-calendar.skill](https://github.com/SocialPostAI/socialpost-claude-skills/raw/main/dist/thirty-day-content-calendar.skill) |
 | linkedin-post-writer | [linkedin-post-writer.skill](https://github.com/SocialPostAI/socialpost-claude-skills/raw/main/dist/linkedin-post-writer.skill) |
 | content-repurposer | [content-repurposer.skill](https://github.com/SocialPostAI/socialpost-claude-skills/raw/main/dist/content-repurposer.skill) |
+| carousel-and-visual-brief | [carousel-and-visual-brief.skill](https://github.com/SocialPostAI/socialpost-claude-skills/raw/main/dist/carousel-and-visual-brief.skill) |
 
 Then in Claude, open Settings, find Skills, and upload the file. A `.skill` file is a standard ZIP archive; if the upload dialog only accepts `.zip`, rename the file and it will work as is. Skills on claude.ai need a paid plan with code execution enabled.
 
@@ -122,6 +129,6 @@ Every skill is tested before it ships. It runs against scripted scenarios (a det
 
 ## Coming next
 
-Three more skills are planned, including a carousel builder and an analytics review that closes the loop at day 30. Add the marketplace now and `/plugin marketplace update socialpost-skills` will bring each one to you as it passes testing.
+Two more skills are planned, including an analytics review that closes the loop at day 30. Add the marketplace now and `/plugin marketplace update socialpost-skills` will bring each one to you as it passes testing.
 
 Found a problem, or want a skill that doesn't exist yet? Open an issue.
