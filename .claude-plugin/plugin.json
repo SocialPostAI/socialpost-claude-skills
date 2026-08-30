@@ -1,10 +1,12 @@
 {
   "name": "socialpost-skill-pack",
-  "description": "LinkedIn-first Claude skills for B2B founders: voice profile, 90-day strategy, content pillars and topic bank, presence audit, and a 30-day posting calendar. Free, compliance-first, no automation.",
-  "version": "1.0.0",
+  "description": "LinkedIn-first Claude skills for B2B founders: voice profile, 90-day strategy, content pillars and topic bank, presence audit, a 30-day posting calendar, and a post writer that drafts in your voice. Free, compliance-first, no automation.",
+  "version": "1.1.0",
   "author": {
     "name": "SocialPost.ai",
     "url": "https://socialpostai.com"
   },
-  "skills": ["./skills/"]
+  "skills": [
+    "./skills/"
+  ]
 }
