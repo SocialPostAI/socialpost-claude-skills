@@ -8,8 +8,8 @@
     {
       "name": "socialpost-skill-pack",
       "source": "./",
-      "description": "LinkedIn-first Claude skills for B2B founders: voice profile, 90-day strategy, content pillars and topic bank, presence audit, a 30-day posting calendar, a post writer that drafts in your voice, a repurposer that turns long-form into a week of posts, and a carousel scripter with designer-ready visual briefs. Free, compliance-first, no automation.",
-      "version": "1.3.0"
+      "description": "LinkedIn-first Claude skills for B2B founders: voice profile, 90-day strategy, content pillars and topic bank, presence audit, a 30-day posting calendar, a post writer that drafts in your voice, a long-form repurposer, a carousel scripter with visual briefs, and a manual engagement coach. Free, compliance-first, no automation.",
+      "version": "1.4.0"
     }
   ]
 }

@@ -4,7 +4,7 @@ Free Claude skills for B2B founders who run their own LinkedIn.
 
 A skill is a small instruction file that teaches Claude to do one job well, the same way every time. Load one and Claude stops improvising: it asks the right questions, follows a tested process, and hands you a finished document. This pack covers the LinkedIn jobs a founder without a marketing team actually needs.
 
-Eight skills are ready. Two more are coming.
+Nine skills are ready. One more is coming.
 
 ## Who it's for
 
@@ -44,6 +44,10 @@ Turns one piece of long-form material into a week of LinkedIn posts. Give it a b
 
 Turns a post, topic, or framework into two documents ready for production: a slide-by-slide carousel script and a creative brief for the key visual. The script runs 5 to 8 slides with hard word limits (an 8-word hook, one idea per slide) and a line of guidance on each slide about what to emphasize and what to cut. The brief closes every decision a designer or image model would otherwise guess: background, focal element, the exact overlay text, placement zones, a readability rule for phone screens, and a what-to-avoid list. Alt text comes included. Give it your colors, logo placement, and mood in 3 words and the brief is built on them; skip them and they become slots you fill in one reply. It will not fake engagement screenshots or invented social proof, and it says why.
 
+### engagement-comment-coach
+
+Builds the half of LinkedIn that happens on other people's posts. One-time setup: you supply 15 to 25 names (buyers, peers, ecosystem voices) and it turns them into an engagement list and a 20-minute daily routine card: scan, 3 to 5 real comments, 0 to 2 connection notes, reply to everything on your own posts. Day to day, paste any post and it drafts two comment options that actually add something (your real experience, a respectful counterpoint, or a question worth answering), never "Great post!", plus connection notes under 280 characters that reference something real and pitch nothing. It never looks people up or builds lists from data, and it will decline auto-commenting, pods, and bulk DMs by name, with the reasons, then hand you the manual routine instead.
+
 ## How they fit together
 
 The skills pass files to each other through your working folder, and the chain ends in something you can actually publish:
@@ -59,6 +63,8 @@ Run in order, that's one path from "how do I sound" to a finished post, and each
 Two skills sit alongside the chain rather than inside it. linkedin-presence-audit reads `voice.md` and `about.md` when they exist, so its scores and rewrites match how you actually sound. content-repurposer reads the same two files and brings its own source material: it starts from something long you already wrote instead of a calendar slot, and it can cover a whole week on its own when you have a blog post or transcript to feed it.
 
 One skill picks up where the others leave off: carousel-and-visual-brief takes any finished post, whether the post writer drafted it, the repurposer extracted it, or you wrote it yourself, and turns it into a carousel script plus the visual brief that gets it produced.
+
+And one skill works the other side of the feed: engagement-comment-coach reads the same voice and about files and covers the 20 minutes a day you spend on other people's posts, which is where comments become conversations with buyers.
 
 Any skill also works on its own. It will just ask you for whatever the files would have told it. The post writer, for example, is happy to work from nothing more than a story you paste in.
 
@@ -80,7 +86,7 @@ then:
 /plugin install socialpost-skill-pack@socialpost-skills
 ```
 
-That installs all eight skills at once. When new skills land in this repo, pull them with:
+That installs all nine skills at once. When new skills land in this repo, pull them with:
 
 ```
 /plugin marketplace update socialpost-skills
@@ -100,6 +106,7 @@ Each skill is one downloadable file; no cloning needed. Grab the skill you want:
 | linkedin-post-writer | [linkedin-post-writer.skill](https://github.com/SocialPostAI/socialpost-claude-skills/raw/main/dist/linkedin-post-writer.skill) |
 | content-repurposer | [content-repurposer.skill](https://github.com/SocialPostAI/socialpost-claude-skills/raw/main/dist/content-repurposer.skill) |
 | carousel-and-visual-brief | [carousel-and-visual-brief.skill](https://github.com/SocialPostAI/socialpost-claude-skills/raw/main/dist/carousel-and-visual-brief.skill) |
+| engagement-comment-coach | [engagement-comment-coach.skill](https://github.com/SocialPostAI/socialpost-claude-skills/raw/main/dist/engagement-comment-coach.skill) |
 
 Then in Claude, open Settings, find Skills, and upload the file. A `.skill` file is a standard ZIP archive; if the upload dialog only accepts `.zip`, rename the file and it will work as is. Skills on claude.ai need a paid plan with code execution enabled.
 
@@ -129,6 +136,6 @@ Every skill is tested before it ships. It runs against scripted scenarios (a det
 
 ## Coming next
 
-Two more skills are planned, including an analytics review that closes the loop at day 30. Add the marketplace now and `/plugin marketplace update socialpost-skills` will bring each one to you as it passes testing.
+One more skill is planned: an analytics review that closes the loop at day 30. Add the marketplace now and `/plugin marketplace update socialpost-skills` will bring each one to you as it passes testing.
 
 Found a problem, or want a skill that doesn't exist yet? Open an issue.
