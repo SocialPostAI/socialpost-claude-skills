@@ -26,7 +26,7 @@ Each skill works on its own. Run in order, they pass files to each other through
 This repo is a Claude Code plugin marketplace. Inside Claude Code, run:
 
 ```
-/plugin marketplace add SocialPostAI/socialpost-claude-skills
+/plugin marketplace add SocialPostAI/linkedin-founder-skills
 ```
 
 then:
@@ -42,7 +42,7 @@ That installs all ten skills. Updates arrive with `/plugin marketplace update so
 Copy any skill's folder into `~/.claude/skills/` to install it for every project, or into a project's `.claude/skills/` for that project only:
 
 ```bash
-mkdir -p ~/.claude/skills/founder-voice-profile && curl -fsSL https://raw.githubusercontent.com/SocialPostAI/socialpost-claude-skills/main/skills/founder-voice-profile/SKILL.md -o ~/.claude/skills/founder-voice-profile/SKILL.md
+mkdir -p ~/.claude/skills/founder-voice-profile && curl -fsSL https://raw.githubusercontent.com/SocialPostAI/linkedin-founder-skills/main/skills/founder-voice-profile/SKILL.md -o ~/.claude/skills/founder-voice-profile/SKILL.md
 ```
 
 Swap the skill name for any of the ten. Skills are plain instructions in a text file; nothing executes on your machine.
@@ -53,16 +53,16 @@ Each skill ships as a one-file download in [dist/](dist/). Grab the `.skill` fil
 
 | Skill | Download |
 |-------|----------|
-| founder-voice-profile | [founder-voice-profile.skill](https://github.com/SocialPostAI/socialpost-claude-skills/raw/main/dist/founder-voice-profile.skill) |
-| social-strategy-90-day | [social-strategy-90-day.skill](https://github.com/SocialPostAI/socialpost-claude-skills/raw/main/dist/social-strategy-90-day.skill) |
-| content-pillar-planner | [content-pillar-planner.skill](https://github.com/SocialPostAI/socialpost-claude-skills/raw/main/dist/content-pillar-planner.skill) |
-| linkedin-presence-audit | [linkedin-presence-audit.skill](https://github.com/SocialPostAI/socialpost-claude-skills/raw/main/dist/linkedin-presence-audit.skill) |
-| thirty-day-content-calendar | [thirty-day-content-calendar.skill](https://github.com/SocialPostAI/socialpost-claude-skills/raw/main/dist/thirty-day-content-calendar.skill) |
-| linkedin-post-writer | [linkedin-post-writer.skill](https://github.com/SocialPostAI/socialpost-claude-skills/raw/main/dist/linkedin-post-writer.skill) |
-| content-repurposer | [content-repurposer.skill](https://github.com/SocialPostAI/socialpost-claude-skills/raw/main/dist/content-repurposer.skill) |
-| carousel-and-visual-brief | [carousel-and-visual-brief.skill](https://github.com/SocialPostAI/socialpost-claude-skills/raw/main/dist/carousel-and-visual-brief.skill) |
-| engagement-comment-coach | [engagement-comment-coach.skill](https://github.com/SocialPostAI/socialpost-claude-skills/raw/main/dist/engagement-comment-coach.skill) |
-| social-analytics-review | [social-analytics-review.skill](https://github.com/SocialPostAI/socialpost-claude-skills/raw/main/dist/social-analytics-review.skill) |
+| founder-voice-profile | [founder-voice-profile.skill](https://github.com/SocialPostAI/linkedin-founder-skills/raw/main/dist/founder-voice-profile.skill) |
+| social-strategy-90-day | [social-strategy-90-day.skill](https://github.com/SocialPostAI/linkedin-founder-skills/raw/main/dist/social-strategy-90-day.skill) |
+| content-pillar-planner | [content-pillar-planner.skill](https://github.com/SocialPostAI/linkedin-founder-skills/raw/main/dist/content-pillar-planner.skill) |
+| linkedin-presence-audit | [linkedin-presence-audit.skill](https://github.com/SocialPostAI/linkedin-founder-skills/raw/main/dist/linkedin-presence-audit.skill) |
+| thirty-day-content-calendar | [thirty-day-content-calendar.skill](https://github.com/SocialPostAI/linkedin-founder-skills/raw/main/dist/thirty-day-content-calendar.skill) |
+| linkedin-post-writer | [linkedin-post-writer.skill](https://github.com/SocialPostAI/linkedin-founder-skills/raw/main/dist/linkedin-post-writer.skill) |
+| content-repurposer | [content-repurposer.skill](https://github.com/SocialPostAI/linkedin-founder-skills/raw/main/dist/content-repurposer.skill) |
+| carousel-and-visual-brief | [carousel-and-visual-brief.skill](https://github.com/SocialPostAI/linkedin-founder-skills/raw/main/dist/carousel-and-visual-brief.skill) |
+| engagement-comment-coach | [engagement-comment-coach.skill](https://github.com/SocialPostAI/linkedin-founder-skills/raw/main/dist/engagement-comment-coach.skill) |
+| social-analytics-review | [social-analytics-review.skill](https://github.com/SocialPostAI/linkedin-founder-skills/raw/main/dist/social-analytics-review.skill) |
 
 ## Principles
 
@@ -76,6 +76,6 @@ Each skill ships as a one-file download in [dist/](dist/). Grab the `.skill` fil
 
 ## About us
 
-We make [SocialPost.ai](https://socialpostai.com/?utm_source=claude-skill&utm_medium=skills&utm_campaign=free-skill-pack&utm_content=readme), which takes what your AI wrote and handles the visuals, per-platform formatting, and scheduling. This pack is our way of being useful first.
+We make [SocialPost.ai](https://socialpost.ai/?utm_source=claude-skill&utm_medium=skills&utm_campaign=free-skill-pack&utm_content=readme), which takes what your AI wrote and handles the visuals, per-platform formatting, and scheduling. This pack is our way of being useful first.
 
 Found a problem, or want a skill that doesn't exist yet? Open an issue.
