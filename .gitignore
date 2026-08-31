@@ -4,3 +4,6 @@ skills/*-workspace/
 
 # eval definitions and fixtures stay local (public repo ships skills only)
 skills/*/evals/
+
+# QA methodology stays local (public repo ships skills only)
+_shared/test-loop.md
